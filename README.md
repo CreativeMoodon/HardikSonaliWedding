@@ -1,1 +1,4575 @@
-# HardikSonaliWedding
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hardik &amp; Sonali — Wedding Website</title>
+
+<meta
+    name="description"
+    content="Join Pratika &amp; Deepanshu for their wedding celebration — Haldi, Sangeet &amp; Pheras at the BAPS Hindu Mandir, Dubai."
+>
+
+<style>
+
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+    --background:#fbf8f2;
+    --foreground:#302b25;
+    --gold:#b58a45;
+    --gold-light:rgba(181,138,69,.15);
+    --emerald:#567866;
+    --sand:#eee5d6;
+    --card:#fffdf9;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    margin:0;
+    background:var(--background);
+    color:var(--foreground);
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.6;
+}
+
+a {
+    color:inherit;
+    text-decoration:none;
+}
+
+img {
+    max-width:100%;
+    display:block;
+}
+
+button,
+input,
+textarea,
+select {
+    font:inherit;
+}
+
+.container {
+    width:min(100% - 32px,900px);
+    margin:auto;
+}
+
+.display {
+    font-family:Georgia,"Times New Roman",serif;
+    font-style:italic;
+}
+
+.gold {
+    color:var(--gold);
+}
+
+.text-center {
+    text-align:center;
+}
+
+.upper {
+    text-transform:uppercase;
+    letter-spacing:.25em;
+    font-size:10px;
+}
+
+section {
+    scroll-margin-top:70px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    height:70px;
+    padding:0 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(251,248,242,.94);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--gold-light);
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+    transition:
+        transform .4s ease,
+        opacity .4s ease,
+        visibility .4s ease,
+        background .3s ease;
+}
+
+nav.nav-hidden {
+    transform:translateY(-110%);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.nav-logo {
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.nav-links {
+    display:flex;
+    align-items:center;
+    gap:30px;
+    font-size:13px;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:.16em;
+    color:#625d55;
+}
+
+.nav-links a {
+    position:relative;
+    padding:8px 2px;
+    white-space:nowrap;
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+.nav-links a:hover {
+    color:var(--gold);
+    transform:translateY(-1px);
+}
+
+.nav-links a::after {
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:2px;
+    height:1px;
+    background:var(--gold);
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform .25s ease;
+}
+
+.nav-links a:hover::after {
+    transform:scaleX(1);
+}
+
+.help-text {
+    color:#6d5425;
+    font-size:14px;
+    font-weight:400;
+}
+
+.help-text a {
+    color:#b8860b;
+    font-weight:500;
+}
+
+.help-text a:hover {
+    color:#8f6b08;
+    text-decoration:underline;
+}
+
+
+/* =========================================
+   GANESH
+========================================= */
+
+.ganesh-banner {
+    text-align:center;
+    padding:90px 20px 20px;
+}
+
+.ganesh-icon {
+    width:48px;
+    height:48px;
+    margin:0 auto 8px;
+    object-fit:contain;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    position:relative;
+    min-height:82vh;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:48px 24px 30px;
+    overflow:hidden;
+}
+
+.hero-bg {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.2;
+    z-index:0;
+}
+
+.vignette-top,
+.vignette-bottom {
+    position:absolute;
+    left:0;
+    right:0;
+    z-index:1;
+}
+
+.vignette-top {
+    top:0;
+    height:35%;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(251,248,242,.55),
+            transparent
+        );
+}
+
+.vignette-bottom {
+    bottom:0;
+    height:28%;
+    background:
+        linear-gradient(
+            to top,
+            rgba(251,248,242,.8),
+            transparent
+        );
+}
+
+.hero-content {
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.hero-logo {
+    width:min(380px,80vw);
+    margin:auto;
+    filter:
+        drop-shadow(
+            0 4px 24px rgba(0,0,0,.25)
+        );
+}
+
+
+/* =========================================
+   COUPLE
+========================================= */
+
+.couple-heading {
+    padding:48px 24px;
+    text-align:center;
+}
+
+.couple-heading h1 {
+    font-size:clamp(42px,8vw,64px);
+    margin:0;
+}
+
+.couple-heading span {
+    display:block;
+    font-size:clamp(26px,5vw,40px);
+    margin-top:12px;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.invitation,
+.countdown,
+.save-date,
+.memories,
+.rsvp {
+    padding:90px 24px;
+    width:100%;
+    box-sizing:border-box;
+}
+
+.invitation-inner,
+.countdown-box,
+.save-inner,
+.memory-inner,
+.rsvp-inner {
+    width:min(100%,600px);
+    margin:0 auto;
+    box-sizing:border-box;
+}
+
+.rule {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:28px;
+}
+
+.rule:before,
+.rule:after {
+    content:"";
+    height:1px;
+    width:40px;
+    background:rgba(181,138,69,.4);
+}
+
+.invitation h2,
+.section-title {
+    font-size:32px;
+    margin:0 0 28px;
+}
+
+.invitation p {
+    font-size:14px;
+    color:rgba(48,43,37,.7);
+    line-height:1.9;
+}
+
+.fade-in {
+    opacity:1;
+    visibility:visible;
+    transform:none;
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown-box {
+    border:1px solid var(--gold-light);
+    background:rgba(255,253,249,.6);
+    padding:32px;
+    text-align:center;
+}
+
+.countdown-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+}
+
+.count-number {
+    font-family:Georgia,serif;
+    font-size:36px;
+}
+
+.count-label {
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:#777168;
+}
+
+
+/* =========================================
+   SCRATCH CARD
+========================================= */
+
+.scratch-card {
+    position:relative;
+    overflow:hidden;
+    border:1px solid var(--gold-light);
+    background:var(--card);
+    text-align:center;
+    padding:55px 20px;
+    min-height:180px;
+    cursor:pointer;
+    user-select:none;
+}
+
+.scratch-content {
+    position:relative;
+    z-index:1;
+}
+
+#scratchCanvas {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+    cursor:crosshair;
+    touch-action:none;
+}
+
+.scratch-label {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:20px;
+    z-index:3;
+    color:rgba(255,255,255,.9);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.3em;
+    pointer-events:none;
+}
+
+.scratch-card.revealed .scratch-content {
+    animation:revealDate .8s ease;
+}
+
+@keyframes revealDate {
+
+    from {
+        opacity:0;
+        transform:scale(.95);
+    }
+
+    to {
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+.date {
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:48px;
+    line-height:1;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.events {
+    padding:20px 16px 90px;
+}
+
+.events-header {
+    text-align:center;
+    margin-bottom:32px;
+}
+
+.event-card {
+    margin:0 auto 32px;
+    width:min(100%,600px);
+    border:1px solid var(--gold-light);
+    background:var(--card);
+}
+
+.event-card.emerald {
+    border-color:rgba(86,120,102,.2);
+}
+
+.event-image {
+    width:100%;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    background:#eee5d6;
+}
+
+.event-body {
+    padding:32px;
+}
+
+.event-index {
+    display:block;
+    margin-bottom:8px;
+}
+
+.event-title {
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:28px;
+    margin:0 0 16px;
+}
+
+.event-details {
+    font-size:14px;
+    color:rgba(48,43,37,.8);
+}
+
+.event-note {
+    font-size:14px;
+    color:rgba(48,43,37,.6);
+    font-style:italic;
+    margin:20px 0;
+}
+
+.divider {
+    height:1px;
+    background:var(--gold-light);
+}
+
+
+/* =========================================
+   VENUE
+========================================= */
+
+.venue {
+    padding:80px 24px;
+}
+
+.venue-inner {
+    width:min(100%,600px);
+    margin:auto;
+}
+
+.venue-block {
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.venue-title {
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:32px;
+    margin:0 0 16px;
+}
+
+.venue-address {
+    font-size:14px;
+    color:rgba(48,43,37,.7);
+    margin-bottom:30px;
+}
+
+.venue-image {
+    display:block;
+    width:70%;
+    max-width:400px;
+    height:auto;
+    margin:0 auto 20px;
+    border-radius:4px;
+}
+
+.venue-description {
+    font-size:14px;
+    color:rgba(48,43,37,.7);
+    line-height:1.8;
+    margin-bottom:28px;
+}
+
+.map-button {
+    display:table;
+    width:auto;
+    margin:15px auto 0;
+    padding:10px 16px;
+    border:1px solid rgba(181,138,69,.4);
+    background:transparent;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    font-size:10px;
+    cursor:pointer;
+}
+
+.map-button:hover {
+    background:rgba(181,138,69,.08);
+}
+
+
+/* =========================================
+   MEMORIES
+========================================= */
+
+.memory-frame {
+    overflow:hidden;
+    border:1px solid var(--gold-light);
+}
+
+.memory-slide {
+    display:none;
+    position:relative;
+}
+
+.memory-slide.active {
+    display:block;
+}
+
+.memory-slide img {
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+}
+
+.caption {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:48px 20px 16px;
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.75),
+            transparent
+        );
+    color:white;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+}
+
+.slider-controls {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:18px;
+}
+
+.slider-button {
+    width:42px;
+    height:42px;
+    border:1px solid rgba(181,138,69,.3);
+    border-radius:50%;
+    background:var(--background);
+    cursor:pointer;
+    font-size:18px;
+}
+
+.dots {
+    display:flex;
+    gap:8px;
+}
+
+.dot {
+    width:8px;
+    height:8px;
+    border:0;
+    border-radius:50%;
+    background:rgba(181,138,69,.25);
+    cursor:pointer;
+}
+
+.dot.active {
+    background:var(--gold);
+}
+
+
+/* =========================================
+   GUEST INVITATION LOOKUP
+========================================= */
+
+.guest-lookup {
+    width:100%;
+    padding:80px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.guest-lookup-card {
+    width:100%;
+    max-width:560px;
+    padding:45px 35px;
+    text-align:center;
+    background:rgba(255,255,255,.96);
+    border:1px solid rgba(180,150,80,.35);
+    border-radius:20px;
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.10);
+}
+
+.guest-lookup-icon {
+    font-size:28px;
+    color:goldenrod;
+    margin-bottom:10px;
+}
+
+.guest-lookup-card h2 {
+    margin:0 0 10px;
+    font-size:32px;
+    font-weight:500;
+    color:#6d5425;
+}
+
+.guest-subtitle {
+    margin:0 auto 10px;
+    color:#777;
+    font-size:15px;
+}
+
+.ask-host {
+    display:inline-block;
+    margin-bottom:30px;
+    color:goldenrod;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.ask-host:hover {
+    text-decoration:underline;
+}
+
+#guestLookupForm {
+    width:100%;
+    max-width:560px;
+    margin:0 auto;
+}
+
+.guest-name-row {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    align-items:end;
+}
+
+.guest-field {
+    margin-bottom:20px;
+    text-align:left;
+}
+
+.guest-field label {
+    display:block;
+    margin-bottom:7px;
+    font-size:14px;
+    font-weight:600;
+    color:#5d4b2a;
+}
+
+.guest-field input {
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #d8c9a5;
+    border-radius:8px;
+    background:#fff;
+    color:#333;
+    font-family:inherit;
+    font-size:15px;
+    outline:none;
+}
+
+.guest-field input:focus {
+    border-color:goldenrod;
+    box-shadow:
+        0 0 0 3px rgba(218,165,32,.12);
+}
+
+.find-invitation-btn {
+    width:100%;
+    padding:14px 20px;
+    border:none;
+    border-radius:8px;
+    background:goldenrod;
+    color:white;
+    font-family:inherit;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:
+        transform .2s ease,
+        opacity .2s ease,
+        box-shadow .2s ease;
+}
+
+.find-invitation-btn:hover {
+    opacity:.9;
+    transform:translateY(-1px);
+    box-shadow:
+        0 5px 15px rgba(180,140,40,.25);
+}
+
+.find-invitation-btn:active {
+    transform:translateY(0);
+}
+
+.find-invitation-btn:disabled,
+.rsvp-submit:disabled {
+    opacity:.6;
+    cursor:not-allowed;
+    transform:none;
+}
+
+.guest-error {
+    display:none;
+    margin-top:18px;
+    color:#a33;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.guest-success {
+    display:none;
+    margin-top:18px;
+    color:#567866;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.guest-result {
+    display:none;
+    margin-top:35px;
+    padding-top:5px;
+}
+
+.result-divider {
+    width:70px;
+    height:1px;
+    margin:0 auto 25px;
+    background:goldenrod;
+}
+
+.welcome-text {
+    margin:0 0 5px;
+    color:goldenrod;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+#guestFullName {
+    margin:0 0 12px;
+    color:#6d5425;
+    font-size:28px;
+    font-weight:500;
+}
+
+.guest-welcome {
+    margin:0 auto 25px;
+    max-width:430px;
+    color:#777;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.guest-details {
+    margin:25px 0;
+    padding:20px 0;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+.detail-section {
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.detail-section:last-child {
+    margin-bottom:0;
+}
+
+.detail-label {
+    display:block;
+    margin-bottom:14px;
+    color:#777;
+    font-size:14px;
+    font-weight:600;
+}
+
+.guest-select {
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #d8c9a5;
+    border-radius:8px;
+    background:#fff;
+    color:#333;
+    font-family:inherit;
+    font-size:15px;
+    outline:none;
+}
+
+.guest-select:disabled {
+    opacity:1;
+    color:#6d5425;
+    background:#fffdf8;
+    cursor:default;
+}
+
+.attendee-list {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    text-align:left;
+}
+
+.attendee-option {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 14px;
+    border:1px solid #e5d9bd;
+    border-radius:9px;
+    background:#fff;
+    cursor:pointer;
+    transition:
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.attendee-option:hover {
+    border-color:goldenrod;
+    background:#fffdf8;
+}
+
+.attendee-option input {
+    width:18px;
+    height:18px;
+    margin:0;
+    accent-color:goldenrod;
+    flex-shrink:0;
+}
+
+.attendee-option span {
+    color:#6d5425;
+    font-size:14px;
+}
+
+.attendee-hint {
+    margin:10px 0 0;
+    color:#777;
+    font-size:12px;
+    text-align:center;
+}
+
+.rsvp-status {
+    display:none;
+    margin:12px 0;
+    text-align:center;
+    color:#567866;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.event-selection {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
+}
+
+.event-choice {
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:16px;
+    text-align:left;
+    background:#faf8f2;
+    border:1px solid #e5d9bd;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.event-choice:hover {
+    border-color:goldenrod;
+    background:#fffdf8;
+}
+
+.event-choice input {
+    width:18px;
+    height:18px;
+    margin-top:3px;
+    accent-color:goldenrod;
+    flex-shrink:0;
+}
+
+.event-choice span {
+    display:block;
+    flex:1;
+}
+
+.event-choice strong {
+    display:block;
+    margin-bottom:5px;
+    color:#6d5425;
+    font-size:15px;
+}
+
+.event-choice small {
+    display:block;
+    color:#777;
+    font-size:12px;
+    line-height:1.6;
+}
+
+.event-choice input:disabled {
+    cursor:not-allowed;
+}
+
+/* Decline option uses the same card layout and typography as event options. */
+.event-choice.none-of-the-above { margin-top:0; }
+.event-choice.none-of-the-above small { display:block; }
+
+
+/* =========================================
+   RSVP
+========================================= */
+
+.rsvp {
+    width:100%;
+    padding:80px 20px;
+    display:none;
+}
+
+.rsvp-inner {
+    width:100%;
+    max-width:600px;
+    margin:0 auto;
+}
+
+.rsvp-field {
+    margin-bottom:24px;
+}
+
+.rsvp-field > label {
+    display:block;
+    margin-bottom:8px;
+    color:#6d5425;
+    font-size:15px;
+    font-weight:400;
+    line-height:1.5;
+}
+
+.rsvp-field input[type="tel"],
+.rsvp-field textarea {
+    width:100%;
+    padding:14px 16px;
+    border:1px solid rgba(180,150,80,.45);
+    border-radius:10px;
+    background:rgba(255,255,255,.85);
+    color:#4d3b28;
+    font-family:inherit;
+    font-size:15px;
+    outline:none;
+}
+
+.rsvp-field input[type="tel"]:focus,
+.rsvp-field textarea:focus {
+    border-color:goldenrod;
+    box-shadow:
+        0 0 0 3px rgba(218,165,32,.12);
+}
+
+.rsvp-field textarea {
+    min-height:110px;
+    resize:vertical;
+}
+
+.rsvp-submit {
+    width:100%;
+    padding:15px 24px;
+    border:none;
+    border-radius:30px;
+    background:goldenrod;
+    color:white;
+    font-family:inherit;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .25s ease;
+}
+
+.rsvp-submit:hover {
+    transform:translateY(-2px);
+    opacity:.92;
+}
+
+.rsvp-error {
+    display:none;
+    margin-top:12px;
+    text-align:center;
+    color:#a33;
+    font-size:14px;
+    line-height:1.6;
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+.music-button {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:1px solid rgba(180,150,80,.5);
+    background:rgba(255,255,255,.85);
+    color:#b08a3c;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.12);
+    z-index:9999;
+}
+
+.music-button.playing {
+    animation:musicPulse 1.5s infinite;
+}
+
+@keyframes musicPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(176,138,60,.25);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 10px rgba(176,138,60,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(176,138,60,0);
+    }
+
+}
+
+
+/* =========================================
+   ROSE PETALS
+========================================= */
+
+.petal-field {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:9999;
+}
+
+.petal {
+    position:absolute;
+    top:-40px;
+    display:block;
+    width:14px;
+    height:20px;
+    background:#e8a0aa;
+    border-radius:50% 0 50% 50%;
+    opacity:.7;
+    animation-name:petalFall;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+
+@keyframes petalFall {
+
+    0% {
+        transform:
+            translate3d(
+                0,
+                -40px,
+                0
+            )
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translate3d(
+                var(--drift),
+                50vh,
+                0
+            )
+            rotate(180deg);
+    }
+
+    100% {
+        transform:
+            translate3d(
+                calc(var(--drift) * -1),
+                110vh,
+                0
+            )
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding:55px 20px;
+    text-align:center;
+    border-top:1px solid var(--gold-light);
+}
+
+.footer-logo {
+    width:96px;
+    margin:0 auto 12px;
+}
+
+footer p {
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    color:rgba(48,43,37,.4);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:850px) {
+
+    nav {
+        padding:0 20px;
+    }
+
+    .nav-links {
+        gap:18px;
+        font-size:11px;
+        letter-spacing:.13em;
+    }
+
+    .nav-logo {
+        width:48px;
+        height:48px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:650px) {
+
+    nav {
+        height:62px;
+        padding:0 14px;
+    }
+
+    .nav-logo {
+        width:40px;
+        height:40px;
+    }
+
+    .nav-links {
+        gap:10px;
+        font-size:9px;
+        letter-spacing:.08em;
+    }
+
+    .nav-links a {
+        padding:6px 1px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px) {
+
+    nav {
+        padding:0 10px;
+    }
+
+    .nav-logo {
+        width:36px;
+        height:36px;
+    }
+
+    .nav-links {
+        gap:7px;
+        font-size:8px;
+        letter-spacing:.05em;
+    }
+
+    .hero {
+        min-height:70vh;
+    }
+
+}
+
+
+/* =========================================
+   GENERAL MOBILE SECTIONS
+========================================= */
+
+@media(max-width:600px) {
+
+    .invitation,
+    .countdown,
+    .save-date,
+    .rsvp {
+        padding:60px 20px;
+    }
+
+    .invitation h2,
+    .section-title {
+        font-size:27px;
+    }
+
+    .countdown-box {
+        padding:24px 15px;
+    }
+
+    .count-number {
+        font-size:28px;
+    }
+
+    .date {
+        font-size:36px;
+    }
+
+    .guest-lookup {
+        padding:60px 15px;
+    }
+
+    .guest-lookup-card {
+        padding:35px 20px;
+        border-radius:16px;
+    }
+
+    .guest-lookup-card h2 {
+        font-size:27px;
+    }
+
+    #guestFullName {
+        font-size:24px;
+    }
+
+    .event-choice {
+        padding:14px;
+        gap:10px;
+    }
+
+    .event-choice strong {
+        font-size:14px;
+    }
+
+    .event-choice small {
+        font-size:11px;
+    }
+
+    .rsvp-field > label {
+        font-size:13px;
+    }
+
+    .rsvp-field input[type="tel"],
+    .rsvp-field textarea {
+        font-size:14px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE FIRST / LAST NAME
+========================================= */
+
+@media(max-width:600px) {
+
+    .guest-name-row {
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .guest-field {
+        margin-bottom:16px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     BACKGROUND MUSIC
+========================================= -->
+
+<audio
+    id="weddingMusic"
+    loop
+    playsinline
+    preload="metadata"
+>
+    <source src="aaj-sajeya.mp3" type="audio/mpeg">
+</audio>
+
+<button
+    aria-label="Play wedding music"
+    class="music-button"
+    id="musicButton"
+    type="button"
+>
+    ▶
+</button>
+
+
+<!-- =========================================
+     ROSE PETALS
+========================================= -->
+
+<div class="petal-field" id="petalField"></div>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav id="nav">
+
+    <a href="#top">
+        <img
+            alt="Pratika &amp; Deepanshu monogram"
+            class="nav-logo"
+            src="PratikaWebsite/dp-logo-mark.png"
+        >
+    </a>
+
+    <div class="nav-links">
+
+        <a href="#events">Events</a>
+
+        <a href="#memories">Memories</a>
+
+        <a href="#venue">Venue</a>
+
+        <a href="#guest-invitation">Invitation</a>
+
+        <a href="#rsvp">RSVP</a>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================
+     GANESH
+========================================= -->
+
+<div class="ganesh-banner">
+
+    <img
+        alt="Lord Ganesha"
+        class="ganesh-icon"
+        src="PratikaWebsite/ganesh-icon.png"
+    >
+
+    <div class="upper gold">
+        || Om Shree Ganeshaya Namah ||
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<header class="hero" id="top">
+
+    <img
+        alt="Illustrated Dubai skyline"
+        class="hero-bg"
+        src="PratikaWebsite/dubai-wallpaper.png"
+    >
+
+    <div class="vignette-top"></div>
+
+    <div class="vignette-bottom"></div>
+
+    <div class="hero-content">
+
+        <img
+            alt="Pratika &amp; Deepanshu wedding logo"
+            class="hero-logo"
+            src="PratikaWebsite/DP_LogoNoBG.png"
+        >
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     COUPLE
+========================================= -->
+
+<section class="couple-heading">
+
+    <h1 class="display" style="color:goldenrod;">
+        Pratika &amp; Deepanshu
+    </h1>
+
+    <span class="display">
+        Are Getting Married
+    </span>
+
+</section>
+
+
+<!-- =========================================
+     INVITATION
+========================================= -->
+
+<section class="invitation fade-in">
+
+    <div class="invitation-inner text-center">
+
+        <div class="rule">
+
+            <span class="upper gold">
+                The Invitation
+            </span>
+
+        </div>
+
+        <h2 class="upper gold">
+            Our Union in the City of Gold
+        </h2>
+
+        <p>
+            Deeply rooted in tradition and surrounded
+            by the shifting sands of Dubai, we invite
+            you to witness our vows at the BAPS Hindu
+            Mandir. Two days of joy, ceremony, and
+            celebration — we would be honoured to
+            have you with us.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     COUNTDOWN
+========================================= -->
+
+<section class="countdown fade-in">
+
+    <div class="countdown-box">
+
+        <div
+            class="upper gold"
+            style="margin-bottom:20px"
+        >
+            Counting Down to the Sacred Knot
+        </div>
+
+        <div class="countdown-grid">
+
+            <div>
+
+                <div class="count-number" id="days">
+                    --
+                </div>
+
+                <div class="count-label">
+                    Days
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="count-number" id="hours">
+                    --
+                </div>
+
+                <div class="count-label">
+                    Hours
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="count-number" id="minutes">
+                    --
+                </div>
+
+                <div class="count-label">
+                    Minutes
+                </div>
+
+            </div>
+
+            <div>
+
+                <div class="count-number" id="seconds">
+                    --
+                </div>
+
+                <div class="count-label">
+                    Seconds
+                </div>
+
+            </div>
+
+        </div>
+
+        <div
+            style="
+                margin-top:24px;
+                font-size:12px;
+                color:#777168;
+                font-style:italic
+            "
+        >
+            21 November 2026 • 2:00 PM
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     SAVE THE DATE
+========================================= -->
+
+<section class="save-date">
+
+    <div class="save-inner">
+
+        <div class="scratch-card" id="scratchCard">
+
+            <div class="scratch-content">
+
+                <div
+                    class="upper"
+                    style="
+                        color:var(--emerald);
+                        margin-bottom:16px;
+                    "
+                >
+                    Save The Date
+                </div>
+
+                <div class="date">
+                    21 . 11 . 2026
+                </div>
+
+                <div
+                    style="
+                        margin-top:20px;
+                        font-size:12px;
+                        letter-spacing:.2em;
+                        text-transform:uppercase;
+                    "
+                >
+                    BAPS Hindu Mandir,
+                    Abu Dhabi
+                </div>
+
+                <div
+                    style="
+                        margin-top:8px;
+                        font-size:11px;
+                        letter-spacing:.15em;
+                        text-transform:uppercase;
+                        color:#777168;
+                    "
+                >
+                    2:00 PM Onwards
+                </div>
+
+            </div>
+
+            <canvas id="scratchCanvas"></canvas>
+
+            <span class="scratch-label">
+                Scratch to Reveal
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     EVENTS
+========================================= -->
+
+<section class="events" id="events">
+
+    <div class="events-header">
+
+        <div class="upper gold">
+            The Celebrations
+        </div>
+
+        <h2
+            class="section-title display"
+            style="color:goldenrod;"
+        >
+            Two Days of Joy
+        </h2>
+
+    </div>
+
+
+    <article class="event-card fade-in">
+
+        <img
+            alt="Illustration of Pratika &amp; Deepanshu dancing at their Sangeet"
+            class="event-image"
+            src="PratikaWebsite/sangeet-final1.png"
+        >
+
+        <div class="event-body">
+
+            <span class="upper gold event-index">
+                Function One
+            </span>
+
+            <h3
+                class="event-title"
+                style="color:goldenrod;"
+            >
+                Glam Gala
+            </h3>
+
+            <div class="event-details">
+
+                <p>
+                    Thu, 19th Nov • 7:00 PM
+                </p>
+
+                <p>
+                    Millennium Lakeview Hotel,
+                    Dubai Investment Park
+                </p>
+
+                <p>
+                    <strong>Attire:</strong>
+                    Glitter and Glam
+                </p>
+
+            </div>
+
+            <p class="event-note">
+                An evening of music, dance,
+                and revelry beneath the Dubai skyline.
+            </p>
+
+            <div class="divider"></div>
+
+        </div>
+
+    </article>
+
+
+    <article class="event-card emerald fade-in">
+
+        <img
+            alt="Illustration of Pratika &amp; Deepanshu in wedding attire"
+            class="event-image"
+            src="PratikaWebsite/wedding-final1.png"
+        >
+
+        <div class="event-body">
+
+            <span
+                class="upper"
+                style="color:var(--emerald)"
+            >
+                Function Two
+            </span>
+
+            <h3
+                class="event-title"
+                style="color:goldenrod;"
+            >
+                The Sacred Knot
+            </h3>
+
+            <div class="event-details">
+
+                <p>
+                    Sat, 21st Nov • 2:00 PM
+                </p>
+
+                <p>
+                    BAPS Hindu Mandir,
+                    Abu Dhabi
+                </p>
+
+                <p>
+                    <strong>Attire:</strong>
+                    Pastel &amp; Jewel Harmony
+                </p>
+
+            </div>
+
+            <p class="event-note">
+                Seven sacred vows around the holy fire
+                at the Mandir — the heart of our celebration.
+            </p>
+
+            <div class="divider"></div>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- =========================================
+     MEMORIES
+========================================= -->
+
+<section class="memories fade-in" id="memories">
+
+    <div class="memory-inner">
+
+        <div
+            class="text-center"
+            style="margin-bottom:28px"
+        >
+
+            <div class="upper gold">
+                Our Memories
+            </div>
+
+            <h2
+                class="section-title display"
+                style="color:goldenrod;"
+            >
+                Moments Along the Way
+            </h2>
+
+        </div>
+
+
+        <div class="memory-frame">
+
+            <figure class="memory-slide active">
+
+                <img
+                    alt="Pratika and Deepanshu during their pre-wedding photoshoot"
+                    src="PratikaWebsite/Pre-Wedding1.jpeg"
+                >
+
+                <figcaption class="caption">
+                    A Love Before Forever
+                </figcaption>
+
+            </figure>
+
+            <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu during their pre-wedding photoshoot"
+                    src="PratikaWebsite/Pre-Wedding2.jpeg"
+                >
+
+                <figcaption class="caption">
+                    Our Pre-Wedding Story
+                </figcaption>
+
+            </figure>
+
+             <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu during their pre-wedding photoshoot"
+                    src="PratikaWebsite/Pre-Wedding3.jpeg"
+                >
+
+                <figcaption class="caption">
+                   Just the Two of Us
+                </figcaption>
+
+            </figure>
+
+             <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu during their pre-wedding photoshoot"
+                    src="PratikaWebsite/Pre-Wedding4.jpeg"
+                >
+
+                <figcaption class="caption">
+                    Moments to Treasure
+                </figcaption>
+
+            </figure>
+
+             <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu during their pre-wedding photoshoot"
+                    src="PratikaWebsite/Pre-Wedding5.jpeg"
+                >
+
+                <figcaption class="caption">
+                    Forever Starts Here
+                </figcaption>
+
+            </figure>
+
+            <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu beneath a red rose heart"
+                    src="PratikaWebsite/memory-proposal.jpeg"
+                >
+
+                <figcaption class="caption">
+                    Where Forever Began
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu dressed in red"
+                    src="PratikaWebsite/memory-festive-red.jpeg"
+                >
+
+                <figcaption class="caption">
+                    Festive Moments
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu at Dubai's Museum of the Future"
+                    src="PratikaWebsite/memory-museum-future.jpeg"
+                >
+
+                <figcaption class="caption">
+                    Dubai Days
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="memory-slide">
+
+                <img
+                    alt="Pratika and Deepanshu in traditional Indian attire"
+                    src="PratikaWebsite/memory-traditional.jpeg"
+                >
+
+                <figcaption class="caption">
+                    Together in Tradition
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <div class="slider-controls">
+
+            <button
+                aria-label="Previous memory"
+                class="slider-button"
+                id="prev"
+                type="button"
+            >
+                ❮
+            </button>
+
+            <div
+                class="dots"
+                id="dots"
+            ></div>
+
+            <button
+                aria-label="Next memory"
+                class="slider-button"
+                id="next"
+                type="button"
+            >
+                ❯
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     VENUES
+========================================= -->
+
+<section class="venue" id="venue">
+
+    <div class="venue-inner">
+
+        <div class="venue-block fade-in">
+
+            <div class="upper gold">
+                Glam Gala Venue
+            </div>
+
+            <h2
+                class="venue-title"
+                style="color:goldenrod;"
+            >
+                Millennium Lakeview Hotel
+            </h2>
+
+            <p class="venue-address">
+                Millennium Lakeview Hotel<br>
+                Dubai Investment Park,
+                Dubai, UAE
+            </p>
+
+            <img
+                alt="Millennium Lakeview Hotel beside the lake"
+                class="venue-image"
+                src="PratikaWebsite/millennium-lakeview-hotel.jpeg"
+            >
+
+            <p class="venue-description">
+                Where the Glam Gala comes alive —
+                an evening of music, dance, and celebration
+                under the lights of the Dubai skyline.
+            </p>
+
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Millennium+Lakeview+Hotel%2C+Dubai+Investment+Park%2C+Dubai"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                View on Map
+            </a>
+
+        </div>
+
+
+        <div class="venue-block fade-in">
+
+            <div class="upper gold">
+                The Sacred Knot Venue
+            </div>
+
+            <h2
+                class="venue-title"
+                style="color:goldenrod;"
+            >
+                The BAPS Mandir
+            </h2>
+
+            <p class="venue-address">
+                BAPS Hindu Mandir,<br>
+                Abu Dhabi - Dubai Highway, UAE
+            </p>
+
+            <img
+                alt="BAPS Hindu Mandir in Abu Dhabi"
+                class="venue-image"
+                src="PratikaWebsite/baps-hindu-mandir.jpeg"
+            >
+
+            <p class="venue-description">
+                The first traditional Hindu stone temple
+                in the Middle East — a sanctuary of
+                hand-carved sandstone where our vows
+                will be exchanged.
+                <br><br>
+                Please observe modest attire within
+                the temple premises.
+            </p>
+
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&amp;query=BAPS+Hindu+Mandir%2C+Abu+Dhabi%2C+UAE"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                View on Map
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     GUEST INVITATION LOOKUP
+========================================= -->
+
+<section
+    class="guest-lookup"
+    id="guest-invitation"
+>
+
+    <div class="guest-lookup-card">
+
+        <div class="guest-lookup-icon">
+            ✦
+        </div>
+
+        <h2>
+            Let's Find Your Invitation
+        </h2>
+
+        <p class="guest-subtitle">
+            Enter your name to get your event schedule.
+        </p>
+
+        <p class="help-text">
+
+            Need help?
+
+            <a
+                class="ask-host"
+                href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pratika.d55@gmail.com&amp;cc=deepanshu94@hotmail.com&amp;su=Help%20with%20Wedding%20Invitation"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                Ask the host
+            </a>
+
+        </p>
+
+
+        <form
+            id="guestLookupForm"
+            autocomplete="off"
+            novalidate
+        >
+
+            <div class="guest-name-row">
+
+                <div class="guest-field">
+
+                    <label for="firstName">
+                        First Name
+                    </label>
+
+                    <input
+                        id="firstName"
+                        name="firstName"
+                        type="text"
+                        placeholder="First Name"
+                        autocomplete="given-name"
+                        autocapitalize="words"
+                        spellcheck="false"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="guest-field">
+
+                    <label for="lastName">
+                        Last Name
+                    </label>
+
+                    <input
+                        id="lastName"
+                        name="lastName"
+                        type="text"
+                        placeholder="Last Name"
+                        autocomplete="family-name"
+                        autocapitalize="words"
+                        spellcheck="false"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="findInvitationBtn"
+                class="find-invitation-btn"
+                type="submit"
+            >
+                Find Invitation
+            </button>
+
+        </form>
+
+
+        <div
+            class="guest-error"
+            id="guestError"
+            role="alert"
+            aria-live="polite"
+        ></div>
+
+        <div
+            class="guest-success"
+            id="guestSuccess"
+            role="status"
+            aria-live="polite"
+        ></div>
+
+
+        <div
+            class="guest-result"
+            id="guestResult"
+        >
+
+            <div class="result-divider"></div>
+
+            <p class="welcome-text">
+                Welcome
+            </p>
+
+            <h3 id="guestFullName"></h3>
+
+            <p class="guest-welcome">
+                We are delighted to celebrate these
+                special moments with you.
+            </p>
+
+
+            <div class="guest-details">
+
+
+                <!-- =========================================
+                     NUMBER OF PEOPLE
+                ========================================= -->
+
+                <div class="detail-section">
+
+                    <label
+                        class="detail-label"
+                        for="guestCount"
+                    >
+                        Number of People Attending
+                    </label>
+
+                    <select
+                        class="guest-select"
+                        id="guestCount"
+                    >
+                        <option value="0">
+                            0 Guests — Not Attending
+                        </option>
+                    </select>
+
+                </div>
+
+
+                <!-- =========================================
+                     WHO IS ATTENDING
+                ========================================= -->
+
+                <div class="detail-section">
+
+                    <span class="detail-label">
+                        Who Will Be Attending?
+                    </span>
+
+                    <div
+                        class="attendee-list"
+                        id="attendeeList"
+                    ></div>
+
+                    <p
+                        class="attendee-hint"
+                        id="attendeeHint"
+                    >
+                        Choose 0 if you cannot attend.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 EVENTS
+            ========================================= -->
+
+            <h4
+                style="
+                    margin:30px 0 15px;
+                    color:#6d5425;
+                    font-size:20px;
+                    font-weight:500;
+                "
+            >
+                Your Event Schedule
+            </h4>
+
+
+            <div class="event-selection">
+
+                <label class="event-choice">
+
+                    <input
+                        name="lookupEvents"
+                        type="checkbox"
+                        value="Sangeet"
+                    >
+
+                    <span>
+
+                        <strong>
+                            Sangeet (Glam Gala)
+                        </strong>
+
+                        <small>
+                            Thursday, 19 November 2026 • 7:00 PM<br>
+                            Millennium Lakeview Hotel, Dubai Investment Park
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <label class="event-choice">
+
+                    <input
+                        name="lookupEvents"
+                        type="checkbox"
+                        value="Wedding"
+                    >
+
+                    <span>
+
+                        <strong>
+                            Wedding (The Sacred Knot)
+                        </strong>
+
+                        <small>
+                            Saturday, 21 November 2026 • 2:00 PM<br>
+                            BAPS Hindu Mandir, Abu Dhabi
+                        </small>
+
+                    </span>
+
+                </label>
+
+                <label class="event-choice none-of-the-above">
+                    <input id="noneOfTheAbove" name="lookupEvents" type="checkbox" value="NoneOfTheAbove">
+                    <span>
+                        <strong>None of the above</strong>
+                        <small>Sending our love, but unable to attend any events.</small>
+                    </span>
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     RSVP
+========================================= -->
+
+<section
+    class="rsvp fade-in"
+    id="rsvp"
+>
+
+    <div class="rsvp-inner">
+
+        <div
+            class="text-center"
+            style="margin-bottom:30px;"
+        >
+
+            <div class="upper gold">
+                Kindly Respond
+            </div>
+
+            <h2
+                class="section-title display"
+                style="color:goldenrod;"
+            >
+                Would You Join Us?
+            </h2>
+
+        </div>
+
+
+        <form id="rsvpForm">
+
+            <!-- SERVER CONTROLLED VALUES -->
+
+            <input
+                id="rsvpGuestId"
+                name="guestId"
+                type="hidden"
+                value=""
+            >
+
+            <input
+                id="rsvpGuestNameDisplay"
+                name="primaryGuest"
+                type="hidden"
+                value=""
+            >
+
+            <input
+                id="rsvpGuests1"
+                name="totalGuests"
+                type="hidden"
+                value=""
+            >
+
+            <input
+                id="rsvpAttendingGuests"
+                name="attendingGuests"
+                type="hidden"
+                value=""
+            >
+
+            <input
+                id="rsvpSangeet"
+                name="sangeet"
+                type="hidden"
+                value=""
+            >
+
+            <input
+                id="rsvpWedding"
+                name="wedding"
+                type="hidden"
+                value=""
+            >
+
+
+            <!-- PHONE -->
+
+            <div class="rsvp-field">
+
+                <label for="rsvpPhone">
+                    Phone Number (required if attending)
+                </label>
+
+                <input
+                    autocomplete="tel"
+                    id="rsvpPhone"
+                    inputmode="numeric"
+                    maxlength="14"
+                    name="phone"
+                    pattern="[0-9]{10,14}"
+                    placeholder="Enter your phone number"
+                    type="tel"
+                >
+
+            </div>
+
+
+            <!-- ADVICE -->
+
+            <div class="rsvp-field">
+
+                <label for="advice">
+
+                    Any tips, tricks or survival advice
+                    for Pratika &amp; Deepanshu before they
+                    officially become Mr. &amp; Mrs.? 😂♥️
+
+                </label>
+
+                <textarea
+                    id="advice"
+                    name="advice"
+                    placeholder="Share your wisdom, wishes or marriage survival tips..."
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <p
+                class="rsvp-status"
+                id="rsvpStatus"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+
+            <p
+                class="rsvp-error"
+                id="rsvpError"
+                role="alert"
+                aria-live="assertive"
+            ></p>
+
+
+            <button
+                class="rsvp-submit"
+                type="submit"
+            >
+                Submit RSVP
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <img
+        alt="Pratika &amp; Deepanshu monogram"
+        class="footer-logo"
+        src="PratikaWebsite/dp-logo-footer.png"
+    >
+
+    <p>
+        19 &amp; 21 November 2026
+    </p>
+
+    <p>
+        #DeepkePratipyaar
+    </p>
+
+</footer>
+
+
+<!-- =========================================
+     ROSE PETALS
+========================================= -->
+
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const field =
+            document.getElementById("petalField");
+
+        if (!field) {
+            return;
+        }
+
+
+        function seeded(i, salt) {
+
+            const x =
+                Math.sin(
+                    i * 127.1 +
+                    salt * 311.7
+                ) *
+                43758.5453;
+
+            return x - Math.floor(x);
+
+        }
+
+
+        for (let i = 0; i < 25; i++) {
+
+            const petal =
+                document.createElement("span");
+
+            petal.className = "petal";
+
+
+            const left =
+                seeded(i, 1) * 100;
+
+            const delay =
+                seeded(i, 2) * 12;
+
+            const duration =
+                8 +
+                seeded(i, 3) * 8;
+
+            const size =
+                10 +
+                seeded(i, 4) * 12;
+
+            const drift =
+                (seeded(i, 5) - .5) * 200;
+
+            const opacity =
+                .4 +
+                seeded(i, 6) * .5;
+
+
+            petal.style.left =
+                left + "%";
+
+            petal.style.width =
+                size + "px";
+
+            petal.style.height =
+                (size * 1.3) + "px";
+
+            petal.style.opacity =
+                opacity;
+
+            petal.style.animationDelay =
+                "-" + delay + "s";
+
+            petal.style.animationDuration =
+                duration + "s";
+
+            petal.style.setProperty(
+                "--drift",
+                drift + "px"
+            );
+
+
+            field.appendChild(petal);
+
+        }
+
+    }
+);
+
+</script>
+
+
+<!-- =========================================
+     MUSIC
+========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const music =
+            document.getElementById(
+                "weddingMusic"
+            );
+
+        const button =
+            document.getElementById(
+                "musicButton"
+            );
+
+
+        if (!music || !button) {
+            return;
+        }
+
+
+        music.volume = 0.7;
+
+
+        button.addEventListener(
+            "click",
+            async function () {
+
+                try {
+
+                    if (music.paused) {
+
+                        await music.play();
+
+                        button.innerHTML = "❚❚";
+
+                        button.classList.add(
+                            "playing"
+                        );
+
+                        button.setAttribute(
+                            "aria-label",
+                            "Pause wedding music"
+                        );
+
+                    } else {
+
+                        music.pause();
+
+                        button.innerHTML = "▶";
+
+                        button.classList.remove(
+                            "playing"
+                        );
+
+                        button.setAttribute(
+                            "aria-label",
+                            "Play wedding music"
+                        );
+
+                    }
+
+                } catch (error) {
+
+                    console.error(
+                        "Music playback error:",
+                        error
+                    );
+
+                    alert(
+                        "Music could not be played. " +
+                        "Please make sure aaj-sajeya.mp3 " +
+                        "is uploaded in the same folder as index.html."
+                    );
+
+                }
+
+            }
+        );
+
+
+        music.addEventListener(
+            "pause",
+            function () {
+
+                button.innerHTML = "▶";
+
+                button.classList.remove(
+                    "playing"
+                );
+
+            }
+        );
+
+
+        music.addEventListener(
+            "play",
+            function () {
+
+                button.innerHTML = "❚❚";
+
+                button.classList.add(
+                    "playing"
+                );
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+<!-- =========================================
+     SCRATCH CARD
+========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const card =
+            document.getElementById(
+                "scratchCard"
+            );
+
+        const canvas =
+            document.getElementById(
+                "scratchCanvas"
+            );
+
+
+        if (!card || !canvas) {
+            return;
+        }
+
+
+        const ctx =
+            canvas.getContext("2d");
+
+        let isScratching = false;
+
+
+        function setupCanvas() {
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const dpr =
+                Math.min(
+                    window.devicePixelRatio || 1,
+                    2
+                );
+
+
+            canvas.width =
+                rect.width * dpr;
+
+            canvas.height =
+                rect.height * dpr;
+
+            canvas.style.width =
+                rect.width + "px";
+
+            canvas.style.height =
+                rect.height + "px";
+
+
+            ctx.setTransform(
+                dpr,
+                0,
+                0,
+                dpr,
+                0,
+                0
+            );
+
+
+            const gradient =
+                ctx.createLinearGradient(
+                    0,
+                    0,
+                    rect.width,
+                    rect.height
+                );
+
+
+            gradient.addColorStop(
+                0,
+                "#c8a66a"
+            );
+
+            gradient.addColorStop(
+                .45,
+                "#e1c486"
+            );
+
+            gradient.addColorStop(
+                1,
+                "#9b743a"
+            );
+
+
+            ctx.fillStyle =
+                gradient;
+
+            ctx.fillRect(
+                0,
+                0,
+                rect.width,
+                rect.height
+            );
+
+
+            ctx.globalAlpha = .15;
+
+            ctx.fillStyle = "#6d522b";
+
+
+            for (let i = 0; i < 180; i++) {
+
+                const x =
+                    Math.random() * rect.width;
+
+                const y =
+                    Math.random() * rect.height;
+
+                ctx.fillRect(
+                    x,
+                    y,
+                    1.5,
+                    1.5
+                );
+
+            }
+
+
+            ctx.globalAlpha = 1;
+
+        }
+
+
+        function scratch(x, y) {
+
+            const rect =
+                card.getBoundingClientRect();
+
+            ctx.globalCompositeOperation =
+                "destination-out";
+
+
+            ctx.beginPath();
+
+            ctx.arc(
+                x - rect.left,
+                y - rect.top,
+                28,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fill();
+
+        }
+
+
+        function checkScratchProgress() {
+
+            const imageData =
+                ctx.getImageData(
+                    0,
+                    0,
+                    canvas.width,
+                    canvas.height
+                );
+
+            const pixels =
+                imageData.data;
+
+            let transparent = 0;
+            let total = 0;
+
+
+            for (
+                let i = 3;
+                i < pixels.length;
+                i += 40
+            ) {
+
+                total++;
+
+                if (pixels[i] === 0) {
+                    transparent++;
+                }
+
+            }
+
+
+            const percentage =
+                transparent / total;
+
+
+            if (percentage > .45) {
+
+                card.classList.add(
+                    "revealed"
+                );
+
+                canvas.style.pointerEvents =
+                    "none";
+
+
+                const label =
+                    document.querySelector(
+                        ".scratch-label"
+                    );
+
+
+                if (label) {
+                    label.style.display = "none";
+                }
+
+            }
+
+        }
+
+
+        canvas.addEventListener(
+            "pointerdown",
+            function (e) {
+
+                isScratching = true;
+
+                canvas.setPointerCapture(
+                    e.pointerId
+                );
+
+                scratch(
+                    e.clientX,
+                    e.clientY
+                );
+
+            }
+        );
+
+
+        canvas.addEventListener(
+            "pointermove",
+            function (e) {
+
+                if (!isScratching) {
+                    return;
+                }
+
+                scratch(
+                    e.clientX,
+                    e.clientY
+                );
+
+            }
+        );
+
+
+        canvas.addEventListener(
+            "pointerup",
+            function () {
+
+                isScratching = false;
+
+                checkScratchProgress();
+
+            }
+        );
+
+
+        canvas.addEventListener(
+            "pointercancel",
+            function () {
+
+                isScratching = false;
+
+            }
+        );
+
+
+        setupCanvas();
+
+
+        window.addEventListener(
+            "resize",
+            setupCanvas
+        );
+
+    }
+);
+
+</script>
+
+
+<!-- =========================================
+     MEMORY SLIDER
+========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const slides =
+            document.querySelectorAll(
+                ".memory-slide"
+            );
+
+        const dotsContainer =
+            document.getElementById(
+                "dots"
+            );
+
+        const prev =
+            document.getElementById(
+                "prev"
+            );
+
+        const next =
+            document.getElementById(
+                "next"
+            );
+
+
+        if (
+            !slides.length ||
+            !dotsContainer
+        ) {
+            return;
+        }
+
+
+        let current = 0;
+
+
+        slides.forEach(
+            function (_, index) {
+
+                const dot =
+                    document.createElement(
+                        "button"
+                    );
+
+                dot.className = "dot";
+
+                dot.type = "button";
+
+                dot.setAttribute(
+                    "aria-label",
+                    "Go to memory " +
+                    (index + 1)
+                );
+
+
+                dot.addEventListener(
+                    "click",
+                    function () {
+
+                        current = index;
+
+                        showSlide();
+
+                    }
+                );
+
+
+                dotsContainer.appendChild(
+                    dot
+                );
+
+            }
+        );
+
+
+        const dots =
+            dotsContainer.querySelectorAll(
+                ".dot"
+            );
+
+
+        function showSlide() {
+
+            slides.forEach(
+                function (slide, index) {
+
+                    slide.classList.toggle(
+                        "active",
+                        index === current
+                    );
+
+                }
+            );
+
+
+            dots.forEach(
+                function (dot, index) {
+
+                    dot.classList.toggle(
+                        "active",
+                        index === current
+                    );
+
+                }
+            );
+
+        }
+
+
+        if (prev) {
+
+            prev.addEventListener(
+                "click",
+                function () {
+
+                    current =
+                        (
+                            current -
+                            1 +
+                            slides.length
+                        ) %
+                        slides.length;
+
+                    showSlide();
+
+                }
+            );
+
+        }
+
+
+        if (next) {
+
+            next.addEventListener(
+                "click",
+                function () {
+
+                    current =
+                        (
+                            current +
+                            1
+                        ) %
+                        slides.length;
+
+                    showSlide();
+
+                }
+            );
+
+        }
+
+
+        showSlide();
+
+    }
+);
+
+</script>
+
+
+<!-- =========================================
+     COUNTDOWN
+========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const target =
+            new Date(
+                "2026-11-21T14:00:00+04:00"
+            ).getTime();
+
+
+        function updateCountdown() {
+
+            const now =
+                new Date().getTime();
+
+            let distance =
+                target - now;
+
+
+            if (distance < 0) {
+                distance = 0;
+            }
+
+
+            const days =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            const hours =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60 * 24)
+                    ) /
+                    (1000 * 60 * 60)
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60 * 60)
+                    ) /
+                    (1000 * 60)
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (
+                        distance %
+                        (1000 * 60)
+                    ) /
+                    1000
+                );
+
+
+            const daysEl =
+                document.getElementById(
+                    "days"
+                );
+
+            const hoursEl =
+                document.getElementById(
+                    "hours"
+                );
+
+            const minutesEl =
+                document.getElementById(
+                    "minutes"
+                );
+
+            const secondsEl =
+                document.getElementById(
+                    "seconds"
+                );
+
+
+            if (daysEl) {
+
+                daysEl.textContent =
+                    String(days).padStart(
+                        2,
+                        "0"
+                    );
+
+            }
+
+
+            if (hoursEl) {
+
+                hoursEl.textContent =
+                    String(hours).padStart(
+                        2,
+                        "0"
+                    );
+
+            }
+
+
+            if (minutesEl) {
+
+                minutesEl.textContent =
+                    String(minutes).padStart(
+                        2,
+                        "0"
+                    );
+
+            }
+
+
+            if (secondsEl) {
+
+                secondsEl.textContent =
+                    String(seconds).padStart(
+                        2,
+                        "0"
+                    );
+
+            }
+
+        }
+
+
+        updateCountdown();
+
+        setInterval(
+            updateCountdown,
+            1000
+        );
+
+    }
+);
+
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
+
+    /* =====================================================
+       GOOGLE APPS SCRIPT
+    ===================================================== */
+
+    const RSVP_API_URL =
+        "https://script.google.com/macros/s/AKfycbw752BXI9aWIjmZPrN17j1b20ArR0RNuj7MouaRg-fc1Yfce1Bpy1eB9Dmu2fSohhqm/exec";
+
+    const MAX_TOTAL_GUESTS = 5;
+
+    const NOT_FOUND_MESSAGE =
+        "We couldn't find an invitation with that name. Please check the spelling or contact the host.";
+
+    const SERVER_ERROR_MESSAGE =
+        "The invitation service is currently unavailable. Please try again in a moment or contact the host.";
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const $ = id => document.getElementById(id);
+
+    const guestForm = $("guestLookupForm");
+    const guestResult = $("guestResult");
+    const guestError = $("guestError");
+    const guestSuccess = $("guestSuccess");
+    const guestFullName = $("guestFullName");
+    const firstNameInput = $("firstName");
+    const lastNameInput = $("lastName");
+    const findButton = $("findInvitationBtn");
+
+    const guestCount = $("guestCount");
+    const attendeeList = $("attendeeList");
+    const attendeeHint = $("attendeeHint");
+
+    const eventCheckboxes = Array.from(
+        document.querySelectorAll('input[name="lookupEvents"]')
+    );
+
+    const noneCheckbox = $("noneOfTheAbove");
+
+    const rsvpForm = $("rsvpForm");
+    const rsvpSection = $("rsvp");
+    const rsvpGuestId = $("rsvpGuestId");
+    const rsvpGuestName = $("rsvpGuestNameDisplay");
+    const rsvpGuests = $("rsvpGuests1");
+    const rsvpAttendingGuests = $("rsvpAttendingGuests");
+    const rsvpSangeet = $("rsvpSangeet");
+    const rsvpWedding = $("rsvpWedding");
+    const rsvpPhone = $("rsvpPhone");
+    const rsvpStatus = $("rsvpStatus");
+    const rsvpError = $("rsvpError");
+    const adviceInput = $("advice");
+
+    if (
+        !guestForm || !guestResult || !guestError ||
+        !firstNameInput || !lastNameInput || !findButton ||
+        !guestCount || !attendeeList || !rsvpForm ||
+        !rsvpSection || !rsvpGuestId || !rsvpGuestName ||
+        !rsvpGuests || !rsvpAttendingGuests ||
+        !rsvpSangeet || !rsvpWedding || !rsvpPhone ||
+        !rsvpStatus || !rsvpError || !noneCheckbox
+    ) {
+        console.error(
+            "RSVP initialization failed: a required HTML element is missing."
+        );
+        return;
+    }
+
+    /* =====================================================
+       STATE
+
+       The lookup token comes from Apps Script and must be
+       sent back unchanged when the guest submits the RSVP.
+    ===================================================== */
+
+    let currentGuest = null;
+    let currentLookupToken = "";
+    let lookupInProgress = false;
+    let rsvpSubmitting = false;
+
+    /* =====================================================
+       HELPERS
+    ===================================================== */
+
+    function cleanName(value) {
+        return String(value == null ? "" : value)
+            .trim()
+            .replace(/\s+/g, " ");
+    }
+
+    function normalize(value) {
+        return cleanName(value).toLowerCase();
+    }
+
+    function isAllowed(value) {
+        return value === true ||
+            ["YES", "TRUE", "1"].includes(
+                String(value == null ? "" : value)
+                    .trim()
+                    .toUpperCase()
+            );
+    }
+
+    function setMessage(element, message, display) {
+        element.textContent = message || "";
+        element.style.display = message ? (display || "block") : "none";
+    }
+
+    function showGuestError(message) {
+        setMessage(guestError, message);
+    }
+
+    function showGuestSuccess(message) {
+        setMessage(guestSuccess, message);
+    }
+
+    function showRsvpError(message) {
+        setMessage(rsvpError, message);
+    }
+
+    function showRsvpStatus(message) {
+        setMessage(rsvpStatus, message);
+    }
+
+    async function readJsonResponse(response, context) {
+        const text = (await response.text()).trim();
+
+        if (!text) {
+            throw new Error(
+                context + " returned an empty response. Please try again."
+            );
+        }
+
+        let data;
+
+        try {
+            data = JSON.parse(text);
+        } catch (error) {
+            console.error(context + " returned non-JSON:", text);
+
+            if (
+                text.toLowerCase().includes("<html") ||
+                text.toLowerCase().includes("<!doctype")
+            ) {
+                throw new Error(
+                    "The RSVP service returned a web page instead of RSVP data. Check that the Apps Script web app is deployed correctly."
+                );
+            }
+
+            throw new Error(
+                response.ok ? SERVER_ERROR_MESSAGE :
+                    context + " failed with HTTP " + response.status + "."
+            );
+        }
+
+        if (!response.ok) {
+            throw new Error(
+                data && data.message
+                    ? data.message
+                    : context + " failed with HTTP " + response.status + "."
+            );
+        }
+
+        return data;
+    }
+
+    function getEventType(checkbox) {
+        if (
+            checkbox === noneCheckbox ||
+            checkbox.id === "noneOfTheAbove"
+        ) {
+            return "none";
+        }
+
+        const value = String(checkbox.value || "")
+            .trim()
+            .toLowerCase()
+            .replace(/[^a-z]/g, "");
+
+        if (value === "sangeet") return "sangeet";
+        if (value === "wedding") return "wedding";
+
+        return "other";
+    }
+
+    function isEventChecked(type) {
+        return eventCheckboxes.some(function (checkbox) {
+            return getEventType(checkbox) === type &&
+                checkbox.checked &&
+                !checkbox.disabled;
+        });
+    }
+
+    function setHiddenEventValues(sangeet, wedding) {
+        rsvpSangeet.value = sangeet ? "YES" : "NO";
+        rsvpWedding.value = wedding ? "YES" : "NO";
+    }
+
+    function clearEventSelections() {
+        eventCheckboxes.forEach(function (checkbox) {
+            checkbox.checked = false;
+            checkbox.disabled = true;
+        });
+
+        rsvpSangeet.value = "NO";
+        rsvpWedding.value = "NO";
+    }
+
+    /* =====================================================
+       RESET FORM
+    ===================================================== */
+
+    function clearInvitation(keepSearchFields) {
+        currentGuest = null;
+        currentLookupToken = "";
+
+        window.currentWeddingGuest = null;
+        window.currentLookupToken = null;
+
+        if (!keepSearchFields) {
+            firstNameInput.value = "";
+            lastNameInput.value = "";
+        }
+
+        guestResult.style.display = "none";
+        rsvpSection.style.display = "none";
+        guestFullName.textContent = "";
+        attendeeList.innerHTML = "";
+
+        guestCount.innerHTML =
+            '<option value="0">0 Guests — Not Attending</option>';
+        guestCount.value = "0";
+        guestCount.disabled = true;
+
+        rsvpGuestId.value = "";
+        rsvpGuestName.value = "";
+        rsvpGuests.value = "0";
+        rsvpAttendingGuests.value = "[]";
+        rsvpPhone.value = "";
+
+        if (adviceInput) adviceInput.value = "";
+
+        clearEventSelections();
+
+        const submitButton = rsvpForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = "Submit RSVP";
+        }
+
+        showGuestError("");
+        showGuestSuccess("");
+        showRsvpError("");
+        showRsvpStatus("");
+
+        if (attendeeHint) {
+            attendeeHint.textContent =
+                "Choose 0 if you cannot attend. If attending, the Primary Guest is included automatically.";
+        }
+    }
+
+    /* =====================================================
+       ATTENDEE SELECTION
+
+       Preserve the server's index:
+       0 = Primary Guest
+       1 = Guest 1
+       2 = Guest 2
+       3 = Guest 3
+
+       Never renumber a guest just because the UI order
+       changes. The backend validates these indexes.
+    ===================================================== */
+
+    function getAttendeeCheckboxes() {
+        return Array.from(
+            attendeeList.querySelectorAll(
+                'input[name="attendingGuest"]'
+            )
+        );
+    }
+
+    function getSelectedGuestObjects() {
+        return getAttendeeCheckboxes()
+            .filter(checkbox => checkbox.checked)
+            .map(function (checkbox) {
+                return {
+                    index: Number(checkbox.dataset.index),
+                    name: cleanName(checkbox.value)
+                };
+            })
+            .filter(function (guest) {
+                return Number.isInteger(guest.index) &&
+                    guest.index >= 0 &&
+                    guest.index < MAX_TOTAL_GUESTS &&
+                    !!guest.name;
+            });
+    }
+
+    function getPrimaryCheckbox() {
+        return attendeeList.querySelector(
+            'input[name="attendingGuest"][data-index="0"]'
+        );
+    }
+
+    function enforcePrimaryGuest() {
+        const selected = getSelectedGuestObjects();
+        const primary = getPrimaryCheckbox();
+
+        if (primary && selected.length > 0) {
+            primary.checked = true;
+        }
+    }
+
+    function syncAttendeeSelection() {
+        const selected = getSelectedGuestObjects();
+
+        rsvpGuests.value = String(selected.length);
+
+        rsvpAttendingGuests.value = JSON.stringify(
+            selected.map(guest => guest.name)
+        );
+
+        guestCount.value = String(selected.length);
+
+        if (attendeeHint) {
+            if (selected.length === 0) {
+                attendeeHint.textContent =
+                    "0 people selected. Choose 'None of the above' if you cannot attend.";
+            } else if (selected.length === 1) {
+                attendeeHint.textContent =
+                    "1 person selected — the Primary Guest.";
+            } else {
+                attendeeHint.textContent =
+                    selected.length +
+                    " people selected, including the Primary Guest.";
+            }
+        }
+
+        if (selected.length > 0 && noneCheckbox.checked) {
+            noneCheckbox.checked = false;
+        }
+    }
+
+    function buildGuestCount(maxGuests) {
+        const limit = Math.min(
+            Math.max(Number(maxGuests) || 0, 0),
+            MAX_TOTAL_GUESTS
+        );
+
+        guestCount.innerHTML = "";
+
+        for (let i = 0; i <= limit; i++) {
+            const option = document.createElement("option");
+            option.value = String(i);
+
+            if (i === 0) {
+                option.textContent = "0 Guests — Not Attending";
+            } else if (i === 1) {
+                option.textContent = "1 Guest — Primary Guest";
+            } else {
+                option.textContent = i + " Guests — Total";
+            }
+
+            guestCount.appendChild(option);
+        }
+
+        guestCount.disabled = false;
+        guestCount.value = "0";
+    }
+
+    function buildAttendeeList() {
+        attendeeList.innerHTML = "";
+
+        if (!currentGuest || !Array.isArray(currentGuest.familyMembers)) {
+            return;
+        }
+
+        currentGuest.familyMembers.forEach(function (member) {
+            const label = document.createElement("label");
+            label.className = "attendee-option";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.name = "attendingGuest";
+            checkbox.value = member.name;
+            checkbox.dataset.index = String(member.index);
+
+            const span = document.createElement("span");
+            span.textContent = member.index === 0
+                ? member.name + " (Primary Guest)"
+                : member.name;
+
+            label.appendChild(checkbox);
+            label.appendChild(span);
+            attendeeList.appendChild(label);
+
+            checkbox.addEventListener("change", function () {
+                showRsvpError("");
+
+                if (checkbox.checked && noneCheckbox.checked) {
+                    noneCheckbox.checked = false;
+                }
+
+                enforcePrimaryGuest();
+
+                if (getSelectedGuestObjects().length > MAX_TOTAL_GUESTS) {
+                    checkbox.checked = false;
+
+                    showRsvpError(
+                        "You can select a maximum of 5 people in total."
+                    );
+
+                    enforcePrimaryGuest();
+                }
+
+                syncAttendeeSelection();
+            });
+        });
+    }
+
+    function applyGuestCount(value) {
+        if (!currentGuest) return;
+
+        let count = Number.parseInt(value, 10);
+
+        if (!Number.isFinite(count) || count < 0) count = 0;
+
+        count = Math.min(
+            count,
+            currentGuest.maxGuests,
+            MAX_TOTAL_GUESTS
+        );
+
+        const checkboxes = getAttendeeCheckboxes();
+
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = false;
+        });
+
+        if (count > 0) {
+            const primary = getPrimaryCheckbox();
+
+            if (!primary) {
+                showRsvpError(
+                    "The Primary Guest is missing from this invitation. Please contact the host."
+                );
+                syncAttendeeSelection();
+                return;
+            }
+
+            primary.checked = true;
+
+            let selectedCount = 1;
+
+            checkboxes.forEach(function (checkbox) {
+                if (
+                    checkbox !== primary &&
+                    selectedCount < count
+                ) {
+                    checkbox.checked = true;
+                    selectedCount++;
+                }
+            });
+        }
+
+        enforcePrimaryGuest();
+        syncAttendeeSelection();
+    }
+
+    /* =====================================================
+       NORMALIZE SERVER GUEST DATA
+
+       Keep original server indexes. If the primary guest
+       cannot be found at index 0, stop instead of silently
+       sending incorrect indexes to Apps Script.
+    ===================================================== */
+
+    function normalizeFamilyMembers(guest, primaryName) {
+        if (!Array.isArray(guest.familyMembers)) {
+            throw new Error(
+                "Your invitation was found, but the invited family members could not be loaded. Please contact the host."
+            );
+        }
+
+        const members = guest.familyMembers
+            .map(function (member, arrayIndex) {
+                if (typeof member === "string") {
+                    return {
+                        index: arrayIndex,
+                        name: cleanName(member)
+                    };
+                }
+
+                const rawIndex = member && member.index != null
+                    ? Number(member.index)
+                    : arrayIndex;
+
+                return {
+                    index: rawIndex,
+                    name: cleanName(member && member.name)
+                };
+            })
+            .filter(function (member) {
+                return Number.isInteger(member.index) &&
+                    member.index >= 0 &&
+                    member.index < MAX_TOTAL_GUESTS &&
+                    !!member.name;
+            })
+            .sort((a, b) => a.index - b.index);
+
+        const uniqueIndexes = new Set();
+
+        for (const member of members) {
+            if (uniqueIndexes.has(member.index)) {
+                throw new Error(
+                    "The invitation contains duplicate guest indexes. Please contact the host."
+                );
+            }
+            uniqueIndexes.add(member.index);
+        }
+
+        const primary = members.find(member => member.index === 0);
+
+        if (!primary || normalize(primary.name) !== normalize(primaryName)) {
+            throw new Error(
+                "The Primary Guest index returned by the invitation service is inconsistent. Please check the Apps Script guest list and try again."
+            );
+        }
+
+        return members;
+    }
+
+    /* =====================================================
+       EVENT PERMISSIONS
+    ===================================================== */
+
+    function applyEventPermissions() {
+        eventCheckboxes.forEach(function (checkbox) {
+            const type = getEventType(checkbox);
+
+            if (type === "none") {
+                checkbox.disabled = false;
+                checkbox.checked = false;
+                return;
+            }
+
+            if (type === "sangeet") {
+                checkbox.disabled = !currentGuest.sangeet;
+                checkbox.checked = currentGuest.sangeet;
+            } else if (type === "wedding") {
+                checkbox.disabled = !currentGuest.wedding;
+                checkbox.checked = currentGuest.wedding;
+            } else {
+                checkbox.disabled = true;
+                checkbox.checked = false;
+            }
+        });
+
+        noneCheckbox.disabled = false;
+        noneCheckbox.checked = false;
+
+        setHiddenEventValues(
+            isEventChecked("sangeet"),
+            isEventChecked("wedding")
+        );
+    }
+
+    /* =====================================================
+       INITIAL RESET
+    ===================================================== */
+
+    clearInvitation(true);
+
+    /* =====================================================
+       FIND INVITATION
+    ===================================================== */
+
+    async function performGuestLookup() {
+        if (lookupInProgress) return;
+
+        const firstName = cleanName(firstNameInput.value);
+        const lastName = cleanName(lastNameInput.value);
+
+        showGuestError("");
+        showGuestSuccess("");
+        showRsvpError("");
+        showRsvpStatus("");
+
+        if (!firstName || !lastName) {
+            showGuestError(
+                "Please enter both the First Name and Last Name of the Primary Guest."
+            );
+
+            (!firstName ? firstNameInput : lastNameInput).focus();
+            return;
+        }
+
+        lookupInProgress = true;
+        findButton.disabled = true;
+        findButton.textContent = "Finding Invitation…";
+
+        try {
+            clearInvitation(true);
+
+            const url = RSVP_API_URL +
+                "?action=lookup" +
+                "&firstName=" + encodeURIComponent(firstName) +
+                "&lastName=" + encodeURIComponent(lastName) +
+                "&_=" + Date.now();
+
+            const response = await fetch(url, {
+                method: "GET",
+                cache: "no-store",
+                redirect: "follow"
+            });
+
+            const data = await readJsonResponse(
+                response,
+                "Invitation lookup"
+            );
+
+            if (data.success !== true || !data.guest) {
+                throw new Error(
+                    data && data.message
+                        ? data.message
+                        : NOT_FOUND_MESSAGE
+                );
+            }
+
+            const guest = data.guest;
+            const returnedFirst = cleanName(guest.firstName);
+            const returnedLast = cleanName(guest.lastName);
+
+            if (
+                normalize(returnedFirst) !== normalize(firstName) ||
+                normalize(returnedLast) !== normalize(lastName)
+            ) {
+                throw new Error(NOT_FOUND_MESSAGE);
+            }
+
+            const token = cleanName(data.lookupToken);
+
+            if (!token) {
+                throw new Error(
+                    "Your invitation was found, but the secure invitation session is missing. Check the deployed Apps Script version and its lookup response."
+                );
+            }
+
+            const guestId = cleanName(guest.guestId);
+
+            if (!guestId) {
+                throw new Error(
+                    "Your invitation was found, but its Guest ID is missing. Please contact the host."
+                );
+            }
+
+            const primaryName = returnedFirst + " " + returnedLast;
+            const familyMembers = normalizeFamilyMembers(
+                guest,
+                primaryName
+            );
+
+            let maxGuests = Number(guest.maxGuests);
+
+            if (!Number.isFinite(maxGuests) || maxGuests < 1) {
+                maxGuests = familyMembers.length;
+            }
+
+            maxGuests = Math.min(
+                Math.max(maxGuests, 1),
+                familyMembers.length,
+                MAX_TOTAL_GUESTS
+            );
+
+            currentLookupToken = token;
+
+            currentGuest = {
+                guestId: guestId,
+                lookupToken: token,
+                firstName: returnedFirst,
+                lastName: returnedLast,
+                primaryGuest: primaryName,
+                familyMembers: familyMembers,
+                maxGuests: maxGuests,
+                sangeet: isAllowed(guest.sangeet),
+                wedding: isAllowed(guest.wedding)
+            };
+
+            window.currentWeddingGuest = currentGuest;
+            window.currentLookupToken = token;
+
+            guestFullName.textContent = primaryName;
+            rsvpGuestId.value = guestId;
+            rsvpGuestName.value = primaryName;
+
+            buildGuestCount(maxGuests);
+            buildAttendeeList();
+            applyGuestCount(0);
+            applyEventPermissions();
+
+            guestResult.style.display = "block";
+            rsvpSection.style.display = "block";
+
+            showGuestError("");
+            showRsvpError("");
+            showRsvpStatus("");
+
+            if (guestResult.scrollIntoView) {
+                guestResult.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+
+            console.log("Invitation lookup successful.", {
+                guestId: guestId,
+                familyIndexes: familyMembers.map(member => member.index),
+                sangeet: currentGuest.sangeet,
+                wedding: currentGuest.wedding,
+                tokenReceived: true
+            });
+
+        } catch (error) {
+            console.error("Find invitation error:", error);
+
+            currentGuest = null;
+            currentLookupToken = "";
+            window.currentWeddingGuest = null;
+            window.currentLookupToken = null;
+
+            guestResult.style.display = "none";
+            rsvpSection.style.display = "none";
+
+            showGuestError(
+                error && error.message
+                    ? error.message
+                    : SERVER_ERROR_MESSAGE
+            );
+
+        } finally {
+            lookupInProgress = false;
+            findButton.disabled = false;
+            findButton.textContent = "Find Invitation";
+        }
+    }
+
+    guestForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        performGuestLookup();
+    });
+
+    /* =====================================================
+       GUEST COUNT CONTROL
+    ===================================================== */
+
+    guestCount.addEventListener("change", function () {
+        if (!currentGuest) return;
+        applyGuestCount(guestCount.value);
+    });
+
+    /* =====================================================
+       EVENT SELECTION
+
+       None of the above is an explicit decline choice.
+       Do not automatically select it merely because the
+       user temporarily unchecks an event.
+    ===================================================== */
+
+    eventCheckboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+            if (!currentGuest) return;
+
+            showRsvpError("");
+
+            const type = getEventType(checkbox);
+
+            if (type === "none") {
+                if (noneCheckbox.checked) {
+                    eventCheckboxes.forEach(function (other) {
+                        const otherType = getEventType(other);
+
+                        if (
+                            otherType === "sangeet" ||
+                            otherType === "wedding"
+                        ) {
+                            other.checked = false;
+                        }
+                    });
+
+                    setHiddenEventValues(false, false);
+                    applyGuestCount(0);
+                }
+                return;
+            }
+
+            if (type === "sangeet" || type === "wedding") {
+                if (checkbox.checked) {
+                    noneCheckbox.checked = false;
+                }
+
+                setHiddenEventValues(
+                    isEventChecked("sangeet"),
+                    isEventChecked("wedding")
+                );
+            }
+        });
+    });
+
+    /* =====================================================
+       PHONE NUMBER CLEANING
+    ===================================================== */
+
+    rsvpPhone.addEventListener("input", function () {
+        rsvpPhone.value = rsvpPhone.value.replace(/\D/g, "");
+    });
+
+    /* =====================================================
+       RSVP SUBMISSION
+    ===================================================== */
+
+    rsvpForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        if (rsvpSubmitting) return;
+
+        showRsvpError("");
+        showRsvpStatus("");
+
+        const submitButton = rsvpForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        rsvpSubmitting = true;
+
+        try {
+            if (!currentGuest || !currentGuest.guestId) {
+                throw new Error("Please find your invitation first.");
+            }
+
+            if (!currentLookupToken || !currentGuest.lookupToken) {
+                throw new Error(
+                    "Your secure invitation session is missing. Please find your invitation again."
+                );
+            }
+
+            if (currentLookupToken !== currentGuest.lookupToken) {
+                throw new Error(
+                    "Your secure invitation session does not match. Please find your invitation again."
+                );
+            }
+
+            const selected = getSelectedGuestObjects();
+            const indexes = selected.map(guest => guest.index);
+            const totalGuests = selected.length;
+
+            if (totalGuests > currentGuest.maxGuests) {
+                throw new Error(
+                    "You can select a maximum of " +
+                    currentGuest.maxGuests +
+                    " people for this invitation."
+                );
+            }
+
+            if (totalGuests > MAX_TOTAL_GUESTS) {
+                throw new Error("You can select a maximum of 5 people.");
+            }
+
+            if (totalGuests > 0 && !indexes.includes(0)) {
+                throw new Error(
+                    "The Primary Guest must be included when attending."
+                );
+            }
+
+            const attendingSangeet = isEventChecked("sangeet");
+            const attendingWedding = isEventChecked("wedding");
+            const noneOfTheAbove = noneCheckbox.checked;
+
+            if (
+                noneOfTheAbove &&
+                (attendingSangeet || attendingWedding)
+            ) {
+                throw new Error(
+                    "Please select either an event or 'None of the above', not both."
+                );
+            }
+
+            if (noneOfTheAbove && totalGuests !== 0) {
+                throw new Error(
+                    "For 'None of the above', please select 0 guests attending."
+                );
+            }
+
+            if (
+                !noneOfTheAbove &&
+                !attendingSangeet &&
+                !attendingWedding
+            ) {
+                throw new Error(
+                    "Please select an event or choose 'None of the above'."
+                );
+            }
+
+            if (!noneOfTheAbove && totalGuests === 0) {
+                throw new Error(
+                    "Please select at least one attendee, or choose 'None of the above' if you cannot attend."
+                );
+            }
+
+            if (attendingSangeet && !currentGuest.sangeet) {
+                throw new Error(
+                    "Sangeet is not included in this invitation."
+                );
+            }
+
+            if (attendingWedding && !currentGuest.wedding) {
+                throw new Error(
+                    "Wedding is not included in this invitation."
+                );
+            }
+
+            const phone = rsvpPhone.value.replace(/\D/g, "");
+
+            if (!noneOfTheAbove && !/^\d{10,14}$/.test(phone)) {
+                rsvpPhone.focus();
+                throw new Error(
+                    "Please enter a valid phone number containing 10–14 digits."
+                );
+            }
+
+            if (noneOfTheAbove && phone && !/^\d{10,14}$/.test(phone)) {
+                rsvpPhone.focus();
+                throw new Error(
+                    "If you provide a phone number, it must contain 10–14 digits."
+                );
+            }
+
+            const advice = adviceInput
+                ? String(adviceInput.value || "").trim()
+                : "";
+
+            /*
+             * Send server indexes, not display positions.
+             * Apps Script should derive attendee names from
+             * the invitation row rather than trusting names
+             * supplied by the browser.
+             */
+            const payload = {
+                lookupToken: currentLookupToken,
+                guestId: currentGuest.guestId,
+                primaryGuest: currentGuest.primaryGuest,
+                attendingGuestIndexes: indexes,
+                totalGuests: totalGuests,
+                sangeet: attendingSangeet,
+                wedding: attendingWedding,
+                noneOfTheAbove: noneOfTheAbove,
+                phone: phone,
+                advice: advice
+            };
+
+            console.log("Submitting RSVP:", {
+                guestId: payload.guestId,
+                attendingGuestIndexes: payload.attendingGuestIndexes,
+                totalGuests: payload.totalGuests,
+                sangeet: payload.sangeet,
+                wedding: payload.wedding,
+                noneOfTheAbove: payload.noneOfTheAbove,
+                tokenPresent: !!payload.lookupToken
+            });
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Sending RSVP…";
+            }
+
+            const response = await fetch(RSVP_API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8"
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await readJsonResponse(
+                response,
+                "RSVP submission"
+            );
+
+            if (result.success !== true) {
+                throw new Error(
+                    result && result.message
+                        ? result.message
+                        : "Unable to submit your RSVP. Please try again."
+                );
+            }
+
+            const successMessage = result.message ||
+                "Thank you! Your RSVP has been received.";
+
+            /*
+             * Clear the old token and guest data after success.
+             * Keep the success message visible and restore the
+             * submit button to its normal state.
+             */
+            clearInvitation(false);
+            showGuestSuccess(successMessage);
+
+            if (guestSuccess && guestSuccess.scrollIntoView) {
+                guestSuccess.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+
+        } catch (error) {
+            console.error("RSVP submission error:", error);
+
+            showRsvpStatus("");
+            showRsvpError(
+                error && error.message
+                    ? error.message
+                    : "Unable to submit your RSVP. Please try again."
+            );
+
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit RSVP";
+            }
+
+        } finally {
+            rsvpSubmitting = false;
+        }
+    });
+
+    console.log("Wedding RSVP system initialized.");
+});
+</script>
+
+
+
+
+<!-- =========================================
+     NAVIGATION AUTO HIDE
+========================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const nav =
+            document.getElementById(
+                "nav"
+            );
+
+
+        if (!nav) {
+
+            console.error(
+                "Navigation #nav not found."
+            );
+
+            return;
+
+        }
+
+
+        let lastScrollTop =
+            window.scrollY ||
+            document.documentElement.scrollTop;
+
+
+        let ticking = false;
+
+
+        function updateNavigation() {
+
+            const currentScroll =
+                window.scrollY ||
+                document.documentElement.scrollTop;
+
+
+            /* =========================================
+               AT TOP
+            ========================================= */
+
+            if (
+                currentScroll <= 30
+            ) {
+
+                nav.classList.remove(
+                    "nav-hidden"
+                );
+
+            }
+
+
+            /* =========================================
+               SCROLLING DOWN
+            ========================================= */
+
+            else if (
+                currentScroll >
+                lastScrollTop + 5
+            ) {
+
+                nav.classList.add(
+                    "nav-hidden"
+                );
+
+            }
+
+
+            /* =========================================
+               SCROLLING UP
+            ========================================= */
+
+            else if (
+                currentScroll <
+                lastScrollTop - 5
+            ) {
+
+                nav.classList.remove(
+                    "nav-hidden"
+                );
+
+            }
+
+
+            lastScrollTop =
+                Math.max(
+                    currentScroll,
+                    0
+                );
+
+
+            ticking = false;
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (!ticking) {
+
+                    window.requestAnimationFrame(
+                        updateNavigation
+                    );
+
+                    ticking = true;
+
+                }
+
+            },
+            {
+                passive:true
+            }
+        );
+
+
+        updateNavigation();
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
