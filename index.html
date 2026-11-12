@@ -19,13 +19,13 @@
 ========================================= */
 
 :root {
-    --background:#fbf8f2;
+    --background:#ffffff;
     --foreground:#302b25;
     --gold:#b58a45;
     --gold-light:rgba(181,138,69,.15);
     --emerald:#567866;
-    --sand:#eee5d6;
-    --card:#fffdf9;
+    --sand:#f5f5f5;
+    --card:#ffffff;
 }
 
 * {
@@ -105,7 +105,7 @@ nav {
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background:rgba(251,248,242,.94);
+    background:rgba(255,255,255,.98);
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
     border-bottom:1px solid var(--gold-light);
@@ -119,12 +119,7 @@ nav {
         background .3s ease;
 }
 
-nav.nav-hidden {
-    transform:translateY(-110%);
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-}
+/* Navigation stays visible while scrolling. */
 
 .nav-logo {
     width:52px;
@@ -215,11 +210,11 @@ nav.nav-hidden {
 
 .hero {
     position:relative;
-    min-height:82vh;
+    min-height:auto;
     display:flex;
-    align-items:flex-start;
+    align-items:center;
     justify-content:center;
-    padding:48px 24px 30px;
+    padding:18px 24px 0;
     overflow:hidden;
 }
 
@@ -247,7 +242,7 @@ nav.nav-hidden {
     background:
         linear-gradient(
             to bottom,
-            rgba(251,248,242,.55),
+            rgba(255,255,255,.75),
             transparent
         );
 }
@@ -258,7 +253,7 @@ nav.nav-hidden {
     background:
         linear-gradient(
             to top,
-            rgba(251,248,242,.8),
+            rgba(255,255,255,.95),
             transparent
         );
 }
@@ -270,7 +265,7 @@ nav.nav-hidden {
 }
 
 .hero-logo {
-    width:min(380px,80vw);
+    width:min(320px,76vw);
     margin:auto;
     filter:
         drop-shadow(
@@ -284,7 +279,7 @@ nav.nav-hidden {
 ========================================= */
 
 .couple-heading {
-    padding:48px 24px;
+    padding:6px 24px 34px;
     text-align:center;
 }
 
@@ -296,7 +291,7 @@ nav.nav-hidden {
 .couple-heading span {
     display:block;
     font-size:clamp(26px,5vw,40px);
-    margin-top:12px;
+    margin-top:5px;
 }
 
 
@@ -340,13 +335,13 @@ nav.nav-hidden {
     background:rgba(181,138,69,.4);
 }
 
-. h2,
+h2,
 .section-title {
     font-size:32px;
     margin:0 0 28px;
 }
 
-. p {
+p {
     font-size:14px;
     color:rgba(48,43,37,.7);
     line-height:1.9;
@@ -365,7 +360,7 @@ nav.nav-hidden {
 
 .countdown-box {
     border:1px solid var(--gold-light);
-    background:rgba(255,253,249,.6);
+    background:#ffffff;
     padding:32px;
     text-align:center;
 }
@@ -890,7 +885,7 @@ footer p {
 
 @media(max-width:600px) {
 
-    .,
+    .invitation,
     .countdown,
     .save-date,
     .rsvp {
@@ -2399,135 +2394,6 @@ document.addEventListener(
 
 </script>
 
-
-<!-- =========================================
-     NAVIGATION AUTO HIDE
-========================================= -->
-
-<script>
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        const nav =
-            document.getElementById(
-                "nav"
-            );
-
-
-        if (!nav) {
-
-            console.error(
-                "Navigation #nav not found."
-            );
-
-            return;
-
-        }
-
-
-        let lastScrollTop =
-            window.scrollY ||
-            document.documentElement.scrollTop;
-
-
-        let ticking = false;
-
-
-        function updateNavigation() {
-
-            const currentScroll =
-                window.scrollY ||
-                document.documentElement.scrollTop;
-
-
-            /* =========================================
-               AT TOP
-            ========================================= */
-
-            if (
-                currentScroll <= 30
-            ) {
-
-                nav.classList.remove(
-                    "nav-hidden"
-                );
-
-            }
-
-
-            /* =========================================
-               SCROLLING DOWN
-            ========================================= */
-
-            else if (
-                currentScroll >
-                lastScrollTop + 5
-            ) {
-
-                nav.classList.add(
-                    "nav-hidden"
-                );
-
-            }
-
-
-            /* =========================================
-               SCROLLING UP
-            ========================================= */
-
-            else if (
-                currentScroll <
-                lastScrollTop - 5
-            ) {
-
-                nav.classList.remove(
-                    "nav-hidden"
-                );
-
-            }
-
-
-            lastScrollTop =
-                Math.max(
-                    currentScroll,
-                    0
-                );
-
-
-            ticking = false;
-
-        }
-
-
-        window.addEventListener(
-            "scroll",
-            function () {
-
-                if (!ticking) {
-
-                    window.requestAnimationFrame(
-                        updateNavigation
-                    );
-
-                    ticking = true;
-
-                }
-
-            },
-            {
-                passive:true
-            }
-        );
-
-
-        updateNavigation();
-
-    }
-);
-
-</script>
 
 
 </body>
